@@ -50,7 +50,7 @@ public class ProblemRepository {
         ProblemsList.add(new Problem("Power of Two", "Recursion", "Easy", "https://leetcode.com/problems/power-of-two"));
         ProblemsList.add(new Problem("Reverse String", "Recursion", "Easy", "https://leetcode.com/problems/reverse-string"));
         ProblemsList.add(new Problem("Subsets", "Recursion", "Medium", "https://leetcode.com/problems/subsets"));
-        ProblemsList.add(new Problem("Permutations", "Recursion", "Medium", "https://leetcode.com/problems/permutations"));)
+        ProblemsList.add(new Problem("Permutations", "Recursion", "Medium", "https://leetcode.com/problems/permutations"));
         ProblemsList.add(new Problem("Combination Sum", "Recursion", "Medium", "https://leetcode.com/problems/combination-sum"));
         ProblemsList.add(new Problem("Generate Parentheses", "Recursion", "Medium", "https://leetcode.com/problems/generate-parentheses"));
         ProblemsList.add(new Problem("Letter Combinations of a Phone Number", "Recursion", "Medium", "https://leetcode.com/problems/letter-combinations-of-a-phone-number"));
