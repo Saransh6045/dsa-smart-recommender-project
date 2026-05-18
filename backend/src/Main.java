@@ -15,10 +15,20 @@ public class Main {
         System.out.println(p1);*/
 
         //Main method to test the ProblemRepository class, to check if the problems are being stored properly and if the getAllProblems method is working properly or not.
-        List<Problem> lst = ProblemRepository.getAllProblems();
+        /*List<Problem> lst = ProblemRepository.getAllProblems();
 
         for (Problem p : lst) {
             System.out.println(p);
+        }*/
+
+        List<Problem> lst = ProblemRepository.getAllProblems();
+        List<Problem> recommendedList = service.RecommendationService.recommend(lst, "Arrays", "Easy");
+
+        System.out.println("Recommended Problems: ");
+        for (Problem p : recommendedList) {
+            System.out.println(p);
         }
+
+
     }
 }
