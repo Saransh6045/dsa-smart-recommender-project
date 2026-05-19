@@ -33,6 +33,10 @@ public class Main {
         System.out.println("Available Topics: \n 1. Arrays \n 2. Strings \n 3. Linked Lists \n 4. Recursion \n 5. Stacks \n 6. Queues");
         System.out.println("Enter topic number: ");
         int topicNum = Integer.parseInt(br.readLine());
+        if(topicNum<1 || topicNum>6){
+            System.out.println("Invalid topic number. Please enter a number between 1 and 6.");
+            return;
+        }
 
         String[] topics = {"Arrays", "Strings", "Linked List", "Recursion", "Stack", "Queue"};
         String topic = topics[topicNum - 1];
@@ -40,6 +44,10 @@ public class Main {
         System.out.println("Available Difficulty Levels: \n 1. Easy \n 2. Medium \n 3. Hard");
         System.out.println("Enter difficulty: ");
         int difficultyNum = Integer.parseInt(br.readLine());
+        if(difficultyNum<1 || difficultyNum>3){
+            System.out.println("Invalid difficulty number. Please enter a number between 1 and 3.");
+            return;
+        }
 
         String[] difficulties = {"Easy", "Medium", "Hard"};
         String difficulty = difficulties[difficultyNum - 1];
