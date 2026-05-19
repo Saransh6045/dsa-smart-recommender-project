@@ -3,6 +3,7 @@ package service;
 import model.Problem;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Collections;
 
 public class RecommendationService {
 
@@ -20,6 +21,8 @@ public class RecommendationService {
                 if (result.size() == 5) break;
             }
         }
+        // Shuffle the result list to provide a random selection of problems that match the criteria, instead of always returning the same set of problems in the same order.
+        Collections.shuffle(result); 
 
         return result;
     }
