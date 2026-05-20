@@ -7,6 +7,7 @@ public class Problem {
     private String topic;
     private String difficulty;
     private String link;
+    private boolean solved;
 
     // Constructor
     public Problem(String title, String topic, String difficulty, String link) {
@@ -14,6 +15,7 @@ public class Problem {
         this.topic = topic;
         this.difficulty = difficulty;
         this.link = link;
+        this.solved = false; 
     }
 
     // Getters
@@ -31,6 +33,14 @@ public class Problem {
 
     public String getLink() {
         return link;
+    }
+
+    public boolean isSolved() {
+        return solved;
+    }
+
+    public void setSolved(boolean solved) {
+        this.solved = solved;
     }
 
     // For printing

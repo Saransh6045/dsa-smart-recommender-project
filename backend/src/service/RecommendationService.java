@@ -14,7 +14,7 @@ public class RecommendationService {
 
         for (Problem p : Problems) {
             if (p.getTopic().equalsIgnoreCase(topic)
-                    && p.getDifficulty().equalsIgnoreCase(difficulty)) {
+                    && p.getDifficulty().equalsIgnoreCase(difficulty) && !p.isSolved()) {
 
                 result.add(p);
 

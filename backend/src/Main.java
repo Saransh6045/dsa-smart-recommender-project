@@ -59,6 +59,16 @@ public class Main {
             System.out.println(p);
         }
 
+        System.out.println("Mark yes/no if you have solved the first problem.");
+        String ans = br.readLine();
+        if(ans.equalsIgnoreCase("yes")){
+            recommendedList.get(0).setSolved(true);
+            System.out.println("Problem marked as solved.");
+        } else {
+            System.out.println("Problem not marked as solved.");
+        }
+
+
 
     }
 }
