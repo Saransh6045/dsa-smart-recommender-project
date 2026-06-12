@@ -5,6 +5,8 @@ import java.io.InputStreamReader;
 import model.Problem;
 import java.util.List;
 import data.ProblemRepository;
+import service.RecommendationService;
+import service.ProgressionService;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -63,7 +65,18 @@ public class Main {
         String ans = br.readLine();
         if(ans.equalsIgnoreCase("yes")){
             recommendedList.get(0).setSolved(true);
+
+            int solvedCount = ProgressionService.getSolvedCount(lst, topic, difficulty);
+            int totalCount =  ProgressionService.getTotalCount(lst, topic, difficulty);
+            double progress = ProgressionService.getProgressPercentage(lst, topic, difficulty);
+            String nextDifficulty = ProgressionService.suggestNextDifficulty(lst, topic, difficulty);
+
+            System.out.println("\n===== PROGRESS REPORT =====");
+            System.out.println("Solved: "+ solvedCount+ "/"+ totalCount);
+            System.out.printf("Progress: %.2f%%\n", progress);
+            System.out.println("Suggested Next Difficulty: "+ nextDifficulty);
             System.out.println("Problem marked as solved.");
+        
         } else {
             System.out.println("Problem not marked as solved.");
         }
